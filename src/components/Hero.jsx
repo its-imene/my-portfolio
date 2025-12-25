@@ -1,5 +1,5 @@
 import "./Hero.css";
-import girl from "../assets/Group 7.png";
+import girl from "../assets/profilhero.svg";
 
 export default function Hero() {
   return (
