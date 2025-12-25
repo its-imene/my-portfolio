@@ -2,6 +2,7 @@
   text-align: center;
   padding: 20px 40px;
   color: white;
+  position: relative;
 }
 
 .section-title {
@@ -10,29 +11,33 @@
   color: #ffc4f2;
   font-weight: 600;
 }
-.decorative-image1 {
+
+/* Decorative images (slightly adjusted on small screens) */
+.decorative-image1,
+.decorative-image2,
+.elec {
   position: absolute;
+  max-width: 100%;
+}
+
+.decorative-image1 {
   top: 760px;
   left: 480px;
   width: 500px;
-  
 }
+
 .decorative-image2 {
-  position: absolute;
- top: 830px;
- left: 100px;
-  
-  
+  top: 830px;
+  left: 100px;
 }
+
 .elec {
-  position: absolute;
   top: 820px;
   left: 1300px;
   width: 50px;
-  
-  
-} 
+}
 
+/* Grid */
 .service-grid {
   display: flex;
   justify-content: center;
@@ -41,39 +46,36 @@
   margin-top: 100px;
 }
 
+/* Boxes */
 .service-box {
-  position: relative;        /* required for the border overlay */
+  position: relative;
   padding: 70px;
   width: 400px;
   background: #14131352;
   border-radius: 40px;
   box-shadow: 0 0 10px #0003;
-  overflow: hidden;          /* so the SVG doesn't overflow */
+  overflow: hidden;
 }
 
-/* The SVG that draws the border */
+/* SVG border */
 .border-svg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;      /* so it doesn't block clicking inside */
+  pointer-events: none;
 }
 
-/* The dashed rectangle */
 .border-rect {
   width: 100%;
   height: 100%;
   fill: none;
   stroke: #ffffffa9;
   stroke-width: 4px;
-
-  /* CONTROL THESE: */
-  stroke-dasharray: 13 18;   /* 25px dash, 18px gap */
+  stroke-dasharray: 13 18;
   stroke-dashoffset: 0;
-transition: stroke 0.3s, stroke-dashoffset 0.6s;
-
+  transition: stroke 0.3s, stroke-dashoffset 0.6s;
 }
 
 .service-box:hover .border-rect {
@@ -81,16 +83,106 @@ transition: stroke 0.3s, stroke-dashoffset 0.6s;
   stroke-dashoffset: -60;
 }
 
+/* Content */
 .service-box h3 {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 30px;
 }
+
 .service-box ul {
   font-size: 30px;
   text-align: left;
   padding: 20px;
 }
+
 .service-box ul li {
   margin-bottom: 20px;
+}
+
+/* Responsive tweaks without changing too much */
+@media (max-width: 1024px) {
+  .service-grid {
+    gap: 30px;
+  }
+
+  .service-box {
+    width: 350px;
+    padding: 60px;
+  }
+
+  .service-box h3 {
+    font-size: 32px;
+  }
+
+  .service-box ul {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-grid {
+    gap: 25px;
+  }
+
+  .service-box {
+    width: 320px;
+    padding: 55px;
+  }
+
+  .service-box h3 {
+    font-size: 30px;
+  }
+
+  .service-box ul {
+    font-size: 24px;
+  }
+
+  .decorative-image1 {
+    left: 40%;
+  }
+
+  .decorative-image2 {
+    left: 5%;
+  }
+
+  .elec {
+    left: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-grid {
+    gap: 20px;
+  }
+
+  .service-box {
+    width: 90%;
+    padding: 50px 25px;
+  }
+
+  .service-box h3 {
+    font-size: 26px;
+  }
+
+  .service-box ul {
+    font-size: 20px;
+  }
+
+  .decorative-image1 {
+    left: 30%;
+    top: 700px;
+    width: 400px;
+  }
+
+  .decorative-image2 {
+    left: 5%;
+    top: 750px;
+  }
+
+  .elec {
+    left: 75%;
+    top: 720px;
+    width: 40px;
+  }
 }

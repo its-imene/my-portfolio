@@ -9,45 +9,93 @@
     color: #ffc4f2;
     font-weight: 600;
     text-align: center;
+    margin-bottom: 40px;
 }
 
-
-
+/* Grid for projects */
 .projects-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 60px;                             /* spacing between rectangles */
-  max-width: 800px;                      /* total grid width */
-  margin: 0 auto;                        /* center horizontally */
-  justify-items: center;                  /* center items in their columns */
-  padding: 50px 0;                        /* vertical spacing */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* default: 2 columns */
+    gap: 40px;                             /* spacing between rectangles */
+    max-width: 900px;                       /* total grid width */
+    margin: 0 auto;                         /* center horizontally */
+    justify-items: center;                  /* center items in their columns */
+    padding: 20px 0;                        /* vertical spacing */
 }
 
 .project {
-  background: #1a1a1a;
-  border-radius: 22px;
-  border: 1px solid #333;
-  width: 400px;     /* rectangle width */
-  height: 280px;    /* rectangle height */
+    background: #1a1a1a;
+    border-radius: 22px;
+    border: 1px solid #333;
+    width: 400px;     /* rectangle width */
+    height: 280px;    /* rectangle height */
 }
+
 .project img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* ensures the image covers the rectangle */
-  border-radius: 22px; /* matches the rectangle's border radius */
-   
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures the image covers the rectangle */
+    border-radius: 22px; /* matches the rectangle's border radius */
 }
+
+/* Button */
 .cta1 {
-  position: relative;
-  top: 5px;
-  left: 200px;
-  padding: 17px 40px;
-  background-color: #c7a2ff;
-  border: none;
-  border-radius: 20px;
-  margin-top: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  font-family:  "Josefin Sans", sans-serif;
-  font-size: 18px;
- }
+    
+    align-items: center;
+    font-size: 16px;
+    padding: 14px 30px;
+    background-color: #c7a2ff;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .projects-list {
+        grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+        gap: 30px;
+    }
+
+    .project {
+        width: 300px;
+        height: 220px;
+    }
+
+    .section-title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-list {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        gap: 20px;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .cta1 {
+    align-items: center;    /* centers the button inside the grid column */
+    font-size: 16px;
+    padding: 14px 30px;
+    background-color: #c7a2ff;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+}

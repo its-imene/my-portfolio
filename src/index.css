@@ -13,3 +13,7 @@ body {
   background-size: 30px 30px; /* perfect squares */
   font-family: "Josefin Sans", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+

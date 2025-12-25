@@ -17,18 +17,18 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 25px;                 /* spacing between contact items */
+  gap: 25px;
   max-width: 700px;
   margin: 50px auto;
   padding: 30px;
-  background-color: rgba(20, 20, 20, 0.42); /* semi-transparent background */
+  background-color: rgba(20, 20, 20, 0.42);
   border-radius: 50px;
-  cursor: pointer;           /* shows interactive hover effect */
+  cursor: pointer;
   transition: transform 0.3s;
 }
 
 .contact-box:hover {
-  transform: translateY(-5px); /* subtle lift on hover */
+  transform: translateY(-5px);
 }
 
 .border-svg {
@@ -46,7 +46,7 @@
   fill: none;
   stroke: #fbfbfb9b;
   stroke-width: 2;
-  stroke-dasharray: 20, 15;   /* dash length = 20px, spacing = 15px */
+  stroke-dasharray: 20, 15;
   rx: 50;
   ry: 50;
   transition: stroke 0.3s, stroke-dashoffset 0.6s;
@@ -54,27 +54,27 @@
 }
 
 .contact-box:hover .border-rect {
-  stroke: #ffc4f2;          /* change color on hover */
-  stroke-dashoffset: -60;   /* animate dash movement */
+  stroke: #ffc4f2;
+  stroke-dashoffset: -60;
 }
 
 .contact-box > div {
   display: flex;
-  align-items: center;      /* vertical alignment */
-  gap: 15px;                /* space between icon and text */
-  max-width: 300px;         /* limit width so it can be centered */
-  margin: 0 auto;           /* center the row horizontally in the box */
+  align-items: center;
+  gap: 15px;
+  max-width: 300px;
+  margin: 0 auto;
   font-family: "Josefin Sans", sans-serif;
   font-size: 24px;
   color: white;
-  z-index: 1;               /* above SVG border */
+  z-index: 1;
   cursor: pointer;
   transition: transform 0.3s, color 0.3s;
 }
 
 .contact-box > div:hover {
-  transform: translateY(-2px);  /* slight lift on hover */
-  color: #CBACF9;               /* text color change */
+  transform: translateY(-2px);
+  color: #CBACF9;
 }
 
 .contact-box > div img {
@@ -85,15 +85,92 @@
 }
 
 .contact-box > div:hover img {
-  transform: scale(1.2);        /* enlarge icon on hover */
+  transform: scale(1.2);
 }
-#pink{
-    color: #ff94c2;
+
+#pink {
+  color: #ff94c2;
 }
-.attribution{
-    text-align: center;
-    align-items: center;
-    color: white;
-    font-size: 24px;
-    margin-bottom: 10px;
+
+.attribution {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .section--title {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+
+  .contact-box {
+    max-width: 500px;
+    padding: 25px;
+  }
+
+  .contact-box > div {
+    font-size: 20px;
+  }
+
+  .contact-box > div img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section--title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .contact-box {
+    width: 90%;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .contact-box > div {
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .contact-box > div img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .attribution {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section--title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .contact-box {
+    width: 95%;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .contact-box > div {
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .contact-box > div img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .attribution {
+    font-size: 16px;
+  }
 }

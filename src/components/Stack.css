@@ -1,91 +1,110 @@
 .stack {
   text-align: center;
-  padding: 20px 40px;
+  padding: 80px 40px;
   color: white;
 }
-.decorative-image {
-  position: absolute;
-  top: 1640px;
-  left: 530px;
-  width: 400px;
-  
-}
+
 .section-title {
   font-size: 64px;
   color: #ffc4f2;
   font-weight: 600;
+  margin-bottom: 40px;
 }
-.stack-icons{
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    
-}
+
 .stack-icons {
-  display: flex;
-  flex-direction: column;   /* rows stacked vertically */
-  align-items: center;      /* center all rows */
-  gap: 50px;                /* space between rows */
-  margin-top: 100px;
+  display: block;
+  margin: 60px auto 50px auto; /* top margin 60px, bottom 50px, centered horizontally */
+  max-width: 80%;               /* image scales down on smaller screens */
+  width: 100%;
 }
 
-
-/* Each row */
-.first-row,
-.second-row,
-.third-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 220px; /* space between icons */
-
-}
-/* Divider lines */
 .divider {
-  width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  border: 0;
-  border-top: 2px dashed #555; /* thickness & style */
-  margin-top: 20px;
-  margin-bottom: 20px;
-  /* Adjust dash length & spacing */
-  border-top-style: dashed;
-  border-top-width: 2px;
-  border-image: repeating-linear-gradient(to right, #555 0, #555 10px, transparent 10px, transparent 20px) 1;
+  width: 100%;
+  border: none;
+  border-top: 3px dashed #555;
+  margin: 20px 0;
 }
 
+/* Ticker */
 .ticker-wrapper {
   width: 100%;
- 
-  padding: 10px 0px;
-  display: flex;
+  overflow: hidden;
+  padding: 20px 0;
 }
 
 .ticker {
   display: flex;
   gap: 15px;
   animation: scroll 25s linear infinite;
-  width: max-content; /* important */
-   
+  width: max-content;
 }
 
 .item {
   background: #1a1a1a;
-  padding: 30px 90px;
+  padding: 20px 50px;
   border-radius: 22px;
   border: 1px solid #333;
   white-space: nowrap;
-  font-weight: 500;
-  font-size: 24px;
-  font-family: "Josefin Sans", sans-serif;
+  font-size: 22px;
+  transition: transform 0.3s;
 }
 
+.item:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 52px;
+  }
+
+  .stack-icons {
+    max-width: 80%;
+  }
+
+  .item {
+    font-size: 20px;
+    padding: 18px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 48px;
+  }
+
+  .stack-icons {
+    max-width: 80%;
+  }
+
+  .item {
+    font-size: 18px;
+    padding: 16px 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 36px;
+  }
+
+  .stack-icons {
+    max-width: 100%;
+  }
+
+  .item {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+}
+
+/* Ticker animation */
 @keyframes scroll {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
-    transform: translateX(-50%); /* scroll halfway (one set of items) */
+  100% {
+    transform: translateX(-50%);
   }
 }

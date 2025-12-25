@@ -1,17 +1,13 @@
 import "./Services.css";
 import uiux from "../assets/uxui.svg";
 import frontend from "../assets/frontend.svg";
-import decor from "../assets/decor.svg";
-import decor2 from "../assets/decor2.svg";
-import elec from "../assets/elec.svg";
+
 
 export default function Services() {
   return (
     <section className="services">
-      <img src={decor} alt="Decoration" className="decorative-image1" />
-      <img src={decor2} alt="Decoration" className="decorative-image2" />
-      <img src={elec} alt="Decoration" className="elec" />
-      <h2 className="section-title">My Services</h2>
+
+      <h2 className="section-title"> My Services </h2>
 
       <div className="service-grid">
         <div className="service-box">
@@ -20,7 +16,7 @@ export default function Services() {
           </svg>
 
           <img src={uiux} alt="UI UX Design" className="service-icon" />
-          
+
           <h3>UX UI Design</h3>
           <ul>
             <li>Modern & Minimal Interface</li>

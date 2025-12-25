@@ -1,18 +1,16 @@
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: center;   /* centers the menu horizontally */
+  justify-content: center;
   padding: 20px 0;
-           /* stays at the top */
-  top: 0;
-  left: 0;
-  background: transparent;   /* optional */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 40px;                 /* space between menu items */
+  gap: 40px;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-links a {
@@ -20,4 +18,25 @@
   color: white;
   font-size: 27px;
   font-weight: 500;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
 }

@@ -1,91 +1,47 @@
 .hero {
   display: flex;
-  justify-content:center; /* aligns items to the left */
+  justify-content: center;
   align-items: center;
-  padding: 50px 40px;
-  color: white;
+  padding: 80px 40px;
   gap: 60px;
-}
-.first-star {
-  position: absolute;
-  top: 95px;
-  left: 750px;
-  width: 80px;
- 
-  
-}
-.second-star {
-  position: absolute;
-  top: 60px;
-  left: 50px;
-  animation: floatStar3 3s ease-in-out infinite;
-  z-index: 2; /* ensure it’s above background elements */
+  color: white;
 }
 
-@keyframes floatStar3 {
-  0% {
-    transform: translateY(0px) scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: translateY(-15px) scale(1.2); /* float up and enlarge */
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0px) scale(1);     /* back to start */
-    opacity: 0.8;
-  }
- 
-}
-
-.vscode-logo {
-  position: absolute;
-  top: 91px;
-  left:1290px;
-  
-  
-}
-.fleche {
-  position: absolute;
-  top: 600px;
-  left: 560px;
-  width: 200px;
-  
-}
-.react {
-  position: absolute;
-  top: 450px;
-  left: 1164px;
-  animation: spin 6s linear infinite;
-}
-.figma1 {
-  position: absolute;
-  top: 550px;
-  left: 950px;
-}
-.hero-right {
-  text-align: center;
-  margin-top: 50px;
-  align-items: center;
-}
 .hero-left {
-  position: relative;
   display: flex;
-  justify-content: flex-start; /* aligns items to the left */
-  align-items: flex-start;
- 
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-img {
   width: 350px;
   filter: drop-shadow(0 6px 15px #0004);
-  margin: 50px 0px 20px -200px;
+}
+
+.hero-right {
+  max-width: 550px;
 }
 
 .hero-right h1 {
   font-size: 4.5rem;
   margin-bottom: 10px;
-  margin-left: 9px;
+}
+
+.hero-right p {
+  font-size: 1.7rem;
+  line-height: 1.4;
+  margin-top: 30px;
+}
+.cta {
+  padding: 17px 29px;
+  background-color: #c7a2ff;
+  border: none;
+  border-radius: 20px;
+  margin-top: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
 }
 
 .purple {
@@ -94,32 +50,12 @@
 .pink {
   color: #ff94c2;
 }
-.white{
-  color: #ffffff;
+.white {
+  color: white;
 }
-.cta {
-  top: 95px;
-  left: 750px;
-  padding: 17px 29px;
-  background-color: #c7a2ff;
-  border: none;
-  border-radius: 20px;
-  margin-top: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  font-family:  "Josefin Sans", sans-serif;
-  font-size: 18px;
- }
-.hero-right p {
-  font-size: 1.7rem;
-  line-height: 1.4;
-  margin-top: 40px;
-  max-width: 550px;
-  
-}
-.fade-in , #fade-in {
+.fade-in {
   opacity: 0;
-  transform: translateY(10px); /* small lift effect */
+  transform: translateY(10px);
   animation: fadeIn 1.2s ease-out forwards;
 }
 
@@ -129,11 +65,22 @@
     transform: translateY(0);
   }
 }
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero-img {
+    width: 280px;
+  }
+
+  .hero-right h1 {
+    font-size: 3.2rem;
+  }
+
+  .hero-right p {
+    font-size: 1.3rem;
   }
 }
