@@ -1,5 +1,5 @@
 {
-    "homepage": "https://its-imene.github.io/My-portfolio/",
+    "homepage": "https://its-imene.github.io/my-portfolio/",
     "name": "my-portfolio",
     "private": true,
     "version": "0.0.0",
@@ -10,7 +10,7 @@
         "lint": "eslint .",
         "preview": "vite preview",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist"
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "react": "^19.2.0",
