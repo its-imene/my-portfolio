@@ -7,6 +7,7 @@ import Stack from "./components/Stack";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Pexelis from "./components/Pexelis";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Navbar />
 
       <Routes>
-        {/* Home Page */}
+        {/* Home */}
         <Route
           path="/"
           element={
@@ -28,10 +29,13 @@ function App() {
           }
         />
 
-        {/* About Page */}
+        {/* Pages */}
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+
+        {/* Project Details */}
+        <Route path="/pexelis" element={<Pexelis />} />
       </Routes>
     </>
   );

@@ -1,0 +1,112 @@
+.project-page {
+  padding: 120px 12%;
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* HERO */
+.project-hero {
+  margin-bottom: 100px;
+}
+
+.project-hero h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffc4f2;
+}
+
+.project-subtitle {
+  font-size: 22px;
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+.project-hero img {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+/* SECTIONS */
+.project-section {
+  margin-bottom: 80px;
+}
+
+.project-section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffc4f2;
+}
+
+.project-section p {
+  font-size: 18px;
+  max-width: 800px;
+}
+
+.project-section ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.project-section li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.project-hero img {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-hero img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.overlay span {
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Hover Effects */
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.image-wrapper:hover .overlay {
+  opacity: 1;
+}

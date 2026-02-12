@@ -14,7 +14,7 @@ export default function Hero() {
         </h1>
 
         <p className="fade-in">
-          A <span className="pink">Front-end developer<span className="white"> &</span> UX UI Designer</span> blending
+          A <span className="pink">Front-end developer</span> blending
           patience with creativity to craft seamless, beautiful digital experiences.
         </p>
 

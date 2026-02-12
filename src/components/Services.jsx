@@ -17,12 +17,12 @@ export default function Services() {
 
           <img src={uiux} alt="UI UX Design" className="service-icon" />
 
-          <h3>UX UI Design</h3>
-          <ul>
-            <li>Modern & Minimal Interface</li>
-            <li>Clean Layouts & Mockups</li>
-            <li>Responsive & Mobile-First UI</li>
-          </ul>
+          <h3></h3>
+           <ul>
+    <li>Design-to-Code Translation</li>
+    <li>Pixel-Accurate Layouts</li>
+    <li>Responsive & Mobile-First Interfaces</li>
+  </ul>
         </div>
 
 
@@ -31,12 +31,12 @@ export default function Services() {
             <rect className="border-rect" rx="40" ry="40"></rect>
           </svg>
           <img src={frontend} alt="Front-End Development" className="service-icon" />
-          <h3>Front-End Dev</h3>
+          <h3></h3>
           <ul>
-            <li>Turning Designs Into Websites</li>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Smooth Animations & Clean UX</li>
-          </ul>
+    <li>Modern JavaScript & React</li>
+    <li>Reusable & Scalable Components</li>
+    <li>Interactive & Performant Interfaces</li>
+  </ul>
         </div>
       </div>
     </section>
