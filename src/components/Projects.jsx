@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Projects.css";
-const p1 = new URL("../assets/p2.png", import.meta.url).href;
-const p2 = new URL("../assets/soon2.png", import.meta.url).href;
+import p1 from "../assets/p2.svg";
+import p2 from "../assets/soon.svg";
 
 export default function Projects() {
   return (
