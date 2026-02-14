@@ -1,4 +1,4 @@
-import "./Pexelis.css";
+import "./pexelis.css";
 import heroImg from "../assets/p2.svg"; // change if needed
 
 export default function Pexelis() {
