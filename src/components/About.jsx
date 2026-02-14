@@ -53,7 +53,7 @@ export default function About() {
                 <li>Git & GitHub</li>
               </ul>
             </div>
-            <a href="https://github.com/its-imene?tab=repositories"><button className="github-btn">View My Github</button></a>
+            <a href="https://github.com/its-imene"><button className="github-btn">View My Github</button></a>
           </div>
         </div>
       </div>

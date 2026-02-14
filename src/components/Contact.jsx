@@ -13,22 +13,25 @@ export default function Contact() {
                     <rect className="border-rect" rx="16" ry="16"></rect>
                 </svg>
 
-                <div className="email">
+                <a href="mailto:imenekadri04@gmail.com" className="email contact-link">
                     <img src={email} alt="email" className="email-icon" />
                     imenekadri04@gmail.com
-                </div>
-                <div className="linkdin">
-                    <img src={linkdin} alt="linkdin" className="linkdin-icon" />
+                </a>
+
+                <a href="https://www.linkedin.com/in/imene-kdr" target="_blank" rel="noopener noreferrer" className="linkdin contact-link">
+                    <img src={linkdin} alt="linkedin" className="linkdin-icon" />
                     Imene kdr
-                </div>
-                <div className="github">
+                </a>
+
+                <a href="https://github.com/its-imene" target="_blank" rel="noopener noreferrer" className="github contact-link">
                     <img src={github} alt="github" className="github-icon" />
                     its imene
-                </div>
+                </a>
             </div>
 
+
             <footer className="attribution">App icon by <a id="pink" href="https://icons8.com/">icons8</a></footer>
-            
+
         </section>
     );
 }

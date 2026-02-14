@@ -3,6 +3,7 @@
   padding: 40px 20px;
   color: white;
   background-color: #0a0a0a; /* optional page background */
+ 
 }
 
 .section--title {
@@ -12,7 +13,10 @@
   text-align: center;
   margin-bottom: 50px;
 }
-
+a{
+  
+  text-decoration: none;
+}
 .contact-box {
   position: relative;
   display: flex;
@@ -85,6 +89,36 @@
 }
 
 .contact-box > div:hover img {
+  transform: scale(1.2);
+}
+.contact-box > .contact-link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 300px;
+  margin: 0 auto;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
+  color: white;
+  z-index: 1;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+  text-decoration: none; /* remove underline */
+}
+
+.contact-box > .contact-link:hover {
+  transform: translateY(-2px);
+  color: #CBACF9;
+}
+
+.contact-box > .contact-link img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.contact-box > .contact-link:hover img {
   transform: scale(1.2);
 }
 
